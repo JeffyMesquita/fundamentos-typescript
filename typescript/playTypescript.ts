@@ -1,4 +1,4 @@
-function runTs(name: string) {
+function runTs(name: string): string {
   return "TypeScript: Hello " + name + "!";
 }
 
