@@ -1,5 +1,5 @@
 function runJs(name){
-  return "JavaScript: Hello" + name + "!";
+  return "JavaScript: Hello " + name + "!";
 }
 
-runJs("Jeffy")
+console.log(runJs("Jeffy"))
