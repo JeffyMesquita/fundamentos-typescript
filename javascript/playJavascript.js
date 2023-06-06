@@ -1,5 +1,4 @@
-function runJs(name){
-  return "JavaScript: Hello " + name + "!";
-}
+// Tipagem Dinâmica
+let message = "Hello World";
 
-console.log(runJs("Jeffy"))
+console.log(message.toLocaleUpperCase());

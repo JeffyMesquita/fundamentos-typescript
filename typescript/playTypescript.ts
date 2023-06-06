@@ -1,5 +1,4 @@
-function runTs(name: string): string {
-  return "TypeScript: Hello " + name + "!";
-}
+// Tipagem estática
+let message: string = "Help me, Obi-Wan Kenobi. You're my only hope!";
 
-console.log(runTs("Jeffy"));
+console.log(message);
