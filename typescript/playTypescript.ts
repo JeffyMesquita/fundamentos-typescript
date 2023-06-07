@@ -1,4 +1,12 @@
 // Tipagem estática
-let message: string = "Help me, Obi-Wan Kenobi. You're my only hope!";
+function flipCoin() {
+  return Math.random() > 0.5 ? "Cara" : "Coroa";
+}
 
-console.log(message);
+const result = flipCoin();
+
+if (result === "Cara") {
+  console.log("Você ganhou!");
+} else {
+  console.log("Você perdeu!");
+}

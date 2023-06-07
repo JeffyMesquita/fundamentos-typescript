@@ -1,4 +1,12 @@
 // Tipagem Dinâmica
-let message = "Hello World";
+function flipCoin() {
+  return Math.random() > 0.5 ? "Cara" : "Coroa";
+}
 
-console.log(message.toLocaleUpperCase());
+const result = flipCoin();
+
+if (result === "Cara") {
+  console.log("Você ganhou!");
+} else {
+  console.log("Você perdeu!");
+}
