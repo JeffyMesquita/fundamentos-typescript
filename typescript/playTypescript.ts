@@ -1,21 +1,23 @@
-const message: string = "Hello World";
-const numberValue: number = 10;
-const booleanValue: boolean = true;
+// Interface e Type
 
-const nullValue: null = null;
-const undefinedValue: undefined = undefined;
+interface Person {
+  firstName: string
+  lastName: string
+}
 
-const value: 'primary' | 'secondary' = 'primary';
+// type Person = {
+//   firstName: string
+//   lastName: string
+// }
 
-const list: string[] = ['a', 'b', 'c'];
+const person = {
+  firstName: 'Jeferson',
+  lastName: 'Mesquita',
+  age: 35
+}
 
-const users = [
-    { name: 'John', age: 30 },
-    { name: 'Jane', age: 25 },
-  ]
+function getFullName(person: Person) {
+  return `Hello ${person.firstName} ${person.lastName}`
+}
 
-// const john = users.find(user => user.name === 'John');
-// console.log(john?.age);
-
-const jane = users.length > 4 ? users[3] : null;
-console.log(jane?.age);
+console.log(getFullName(person))
