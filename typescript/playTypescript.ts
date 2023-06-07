@@ -5,19 +5,26 @@ interface Person {
   lastName: string
 }
 
-// type Person = {
-//   firstName: string
-//   lastName: string
+// interface Programmer extends Person {
+//   favoriteLanguage: string // TypeScript
+//   role: string // Front-end | Back-end
 // }
 
-const person = {
-  firstName: 'Jeferson',
-  lastName: 'Mesquita',
-  age: 35
+type Programmer = Person & {
+  favoriteLanguage?: string // TypeScript
+  role: string // Front-end | Back-end
 }
 
-function getFullName(person: Person) {
-  return `Hello ${person.firstName} ${person.lastName}`
+function getBio(programmer: Programmer){
+  return `My name is ${programmer.firstName} ${programmer.lastName}. My favorite language is ${programmer.favoriteLanguage} and I work as a ${programmer.role} developer`;
 }
 
-console.log(getFullName(person))
+
+const programmer: Programmer = {
+  // favoriteLanguage: 'TypeScript',
+  role: 'Front-end',
+  firstName: "Jeferson",
+  lastName: "Mesquita"
+}
+
+console.log(getBio(programmer))
