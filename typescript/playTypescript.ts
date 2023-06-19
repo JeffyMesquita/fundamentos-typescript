@@ -1,10 +1,22 @@
-import {Post , PostComment, User} from './interfaces';  
+import {Post , PostComment, User, Company} from './interfaces';  
 import {lucas, vitor, post, comment, coffstack} from './mocksData';
 
-function identify<Type>(value: Type): Type{
-  return value;
+interface  Page<Data> {
+  data: Data[];
+  count: number;
+  nextPage: number | null;
+  previousPage: number | null; 
 }
 
-const value = identify<User>(lucas);
+function getUserList(): Page<User> {
+  return {
+    count: 5,
+    data: [lucas, vitor,],
+    nextPage: 2,
+    previousPage: null
+  }
+}
 
-console.log(value);
+const users = getUserList();
+
+users.data[0].name;
