@@ -1,22 +1,15 @@
 import {Post , PostComment, User, Company} from './interfaces';  
 import {lucas, vitor, post, comment, coffstack} from './mocksData';
 
-interface  Page<Data> {
-  data: Data[];
-  count: number;
-  nextPage: number | null;
-  previousPage: number | null; 
+// constraints - restrições
+// value user: User
+
+interface WithUser {
+  user: User
 }
 
-function getUserList(): Page<User> {
-  return {
-    count: 5,
-    data: [lucas, vitor,],
-    nextPage: 2,
-    previousPage: null
-  }
+function getAuthorName<Type extends WithUser>(value: Type): string {
+  return value.user.name
 }
 
-const users = getUserList();
-
-users.data[0].name;
+const name = getAuthorName(post)
