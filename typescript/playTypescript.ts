@@ -1,23 +1,22 @@
-import {Post , PostComment, User, Company} from './interfaces';  
-import { vitor, post, coffstack} from './mocksData';
-
-export const lucas: User = {
-  name: "Lucas",
-  userName: "lucasgar6",
-  email: "lucas@coffstacj.com",
-};
-
-export const comment: PostComment = {
-  content: "My first comment",
-  likes: 5,
-  user: vitor, 
-};
-
-// type ContentType = PostComment['user']
-
-
-function getUserProperty<Type, Key extends keyof Type>(value:Type, key: Key): Type[Key]{
-  return value[key];
+const lightMode = {
+  primary: '#074c4e',
+  secondary: '#f86f2d',
+  success: '#4abc86',
+  info: '#63c2de',
+  error: '#ea3838',
+  background: '#f5f5f5',
 }
 
-const value = getUserProperty(comment, 'content');
+type Colors = typeof lightMode
+
+const darkMode: Colors = {
+  primary: '#074c4e',
+  secondary: '#f86f2d',
+  success: '#4abc86',
+  info: '#63c2de',
+  error: '#ea3838',
+  background: '#f5f5f5',
+}
+
+function getTextComponent(Text: string, color: keyof typeof lightMode) {
+}
